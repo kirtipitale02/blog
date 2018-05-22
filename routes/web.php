@@ -55,10 +55,14 @@ Route::delete('blog/{id}', 'BlogsController@destroy');
 
 Route::get('downloadExcel/{type}', 'BlogsController@downloadExcel');
 
-// cors middlewear example
+cors middlewear example
 Route::get('', ['middleware' => 'cors', function() {
        return view('welcome');
 }])->middleware('auth');
+
+// Route::get('', ['middleware' => 'cors', function() {
+//        return view('welcome');
+// }]);
 
 
 
